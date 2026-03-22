@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Balloonification - The Ultimate Balloon Memecoin</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-COYPnTDv.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-yO65_BGs.css">
+    <style>
+      * {
+        background-color: transparent !important;
+      }
+      html, body, #root, main, section, .bg-white, .bg-card, .card, [class*="bg-"], [role="region"] {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+        border-color: #2f3336 !important;
+      }
+      h1, h2, h3, h4, h5, h6, p, span, div, a {
+        color: #ffffff !important;
+      }
+      .bg-white, [class*="bg-white"], .bg-card, [class*="bg-card"] {
+        background-color: #000000 !important;
+      }
+      .text-muted-foreground, .text-gray-500, .text-slate-500 {
+        color: #71767b !important;
+      }
+      button {
+        border-radius: 9999px !important;
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        border: none !important;
+      }
+      button:hover {
+        background-color: #e7e9ea !important;
+      }
+      .gradient-accent {
+        background: linear-gradient(90deg, #1d9bf0, #ffffff) !important;
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #ffffff, #71767b) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+      /* Custom scrollbar for Grok feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2f3336;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #71767b;
+      }
+
+      /* ===== GROK SECTIONS STYLES ===== */
+      .grok-section {
+        background-color: #000000 !important;
+        padding: 80px 24px;
+        font-family: 'Inter', sans-serif;
+      }
+      .grok-section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .grok-section-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        text-align: center;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+      .grok-section-title span {
+        background: linear-gradient(90deg, #ffffff, #71767b) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+      .grok-section-subtitle {
+        font-size: 1.1rem;
+        color: #71767b !important;
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 56px;
+        line-height: 1.6;
+      }
+      .grok-divider {
+        width: 100%;
+        height: 1px;
+        background: #2f3336 !important;
+        margin: 0;
+      }
+
+      /* About Grok Banner */
+      .grok-banner {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        padding: 48px;
+        margin-bottom: 40px;
+      }
+      .grok-banner-text {
+        flex: 1;
+      }
+      .grok-banner-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #71767b !important;
+        margin-bottom: 12px;
+      }
+      .grok-banner-heading {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 16px;
+        line-height: 1.25;
+      }
+      .grok-banner-desc {
+        font-size: 1rem;
+        color: #71767b !important;
+        line-height: 1.7;
+        margin-bottom: 28px;
+      }
+      .grok-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: background 0.2s;
+        border: none !important;
+      }
+      .grok-btn:hover {
+        background-color: #e7e9ea !important;
+        color: #000000 !important;
+      }
+      .grok-btn-outline {
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border: 1px solid #2f3336 !important;
+        margin-left: 12px;
+      }
+      .grok-btn-outline:hover {
+        background-color: #16181c !important;
+        color: #ffffff !important;
+      }
+      .grok-banner-image {
+        flex: 0 0 380px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .grok-banner-image img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+      }
+
+      /* Feature Cards */
+      .grok-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+      .grok-feature-card {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 16px;
+        padding: 28px;
+        transition: border-color 0.2s;
+      }
+      .grok-feature-card:hover {
+        border-color: #536471 !important;
+      }
+      .grok-feature-icon {
+        width: 44px;
+        height: 44px;
+        background-color: #16181c !important;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+      }
+      .grok-feature-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffffff !important;
+        margin-bottom: 8px;
+      }
+      .grok-feature-desc {
+        font-size: 0.875rem;
+        color: #71767b !important;
+        line-height: 1.6;
+      }
+
+      /* Versions Timeline */
+      .grok-versions {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .grok-version-card {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 16px;
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+      }
+      .grok-version-card.active {
+        border-color: #ffffff !important;
+      }
+      .grok-version-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 9999px;
+        background-color: #16181c !important;
+        color: #71767b !important;
+        margin-bottom: 12px;
+      }
+      .grok-version-card.active .grok-version-badge {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .grok-version-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 8px;
+      }
+      .grok-version-date {
+        font-size: 0.8rem;
+        color: #71767b !important;
+        margin-bottom: 12px;
+      }
+      .grok-version-desc {
+        font-size: 0.85rem;
+        color: #71767b !important;
+        line-height: 1.6;
+      }
+
+      /* Stats Row */
+      .grok-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+      .grok-stat-card {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 16px;
+        padding: 28px 24px;
+        text-align: center;
+      }
+      .grok-stat-value {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .grok-stat-label {
+        font-size: 0.85rem;
+        color: #71767b !important;
+      }
+
+      /* Grok x Balloon section */
+      .grok-x-balloon {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 20px;
+        padding: 56px 48px;
+        text-align: center;
+      }
+      .grok-x-balloon-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 16px;
+      }
+      .grok-x-balloon-desc {
+        font-size: 1rem;
+        color: #71767b !important;
+        max-width: 560px;
+        margin: 0 auto 32px;
+        line-height: 1.7;
+      }
+      .grok-x-balloon-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 36px;
+      }
+      .grok-pill {
+        background-color: #16181c !important;
+        color: #ffffff !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 9999px;
+        padding: 8px 18px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      /* Grok Modes */
+      .grok-modes-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+      .grok-mode-card {
+        background-color: #000000 !important;
+        border: 1px solid #2f3336 !important;
+        border-radius: 16px;
+        padding: 32px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .grok-mode-icon-wrap {
+        flex: 0 0 52px;
+        height: 52px;
+        background-color: #16181c !important;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+      }
+      .grok-mode-content {}
+      .grok-mode-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #ffffff !important;
+        margin-bottom: 8px;
+      }
+      .grok-mode-desc {
+        font-size: 0.875rem;
+        color: #71767b !important;
+        line-height: 1.6;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .grok-banner { flex-direction: column; padding: 28px; }
+        .grok-banner-image { flex: none; width: 100%; }
+        .grok-features-grid { grid-template-columns: 1fr; }
+        .grok-versions { grid-template-columns: repeat(2, 1fr); }
+        .grok-stats { grid-template-columns: repeat(2, 1fr); }
+        .grok-modes-grid { grid-template-columns: 1fr; }
+        .grok-section-title { font-size: 1.8rem; }
+        .grok-x-balloon { padding: 36px 24px; }
+      }
+    </style>
+    <script src="/__manus__/debug-collector.js" defer></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- ===== GROK ABOUT SECTION ===== -->
+    <div class="grok-divider"></div>
+
+    <section class="grok-section" id="about-grok">
+      <div class="grok-section-inner">
+        <p class="grok-section-title">Powered by <span>Grok</span> Intelligence</p>
+        <p class="grok-section-subtitle">
+          Balloonification is inspired by xAI's Grok — the truth-seeking AI that's reshaping how the world interacts with intelligence. Here's everything you need to know.
+        </p>
+
+        <!-- Banner -->
+        <div class="grok-banner">
+          <div class="grok-banner-text">
+            <p class="grok-banner-label">About Grok</p>
+            <h2 class="grok-banner-heading">What is Grok?</h2>
+            <p class="grok-banner-desc">
+              Grok is a generative AI chatbot developed by <strong style="color:#ffffff">xAI</strong>, Elon Musk's artificial intelligence company. Launched in November 2023, Grok is designed to be a <em>truth-seeking</em> AI companion with unfiltered answers, real-time access to data from X (formerly Twitter), and frontier capabilities in reasoning, coding, and visual processing.
+            </p>
+            <a href="https://grok.com" target="_blank" rel="noopener noreferrer" class="grok-btn">Try Grok ↗</a>
+            <a href="https://x.ai/news/grok-3" target="_blank" rel="noopener noreferrer" class="grok-btn grok-btn-outline">Read More</a>
+          </div>
+          <div class="grok-banner-image">
+            <img src="/assets/grok-official.webp" alt="Grok AI Official Interface" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grok-stats">
+          <div class="grok-stat-card">
+            <div class="grok-stat-value">200K+</div>
+            <div class="grok-stat-label">H100 GPUs (Colossus)</div>
+          </div>
+          <div class="grok-stat-card">
+            <div class="grok-stat-value">$20B</div>
+            <div class="grok-stat-label">Series E Funding (Jan 2026)</div>
+          </div>
+          <div class="grok-stat-card">
+            <div class="grok-stat-value">Grok 4</div>
+            <div class="grok-stat-label">Latest Model (2025)</div>
+          </div>
+          <div class="grok-stat-card">
+            <div class="grok-stat-value">Real-Time</div>
+            <div class="grok-stat-label">X / Twitter Integration</div>
+          </div>
+        </div>
+
+        <!-- Features Grid -->
+        <p class="grok-section-title" style="font-size:1.8rem; margin-bottom:12px;">Core Capabilities</p>
+        <p class="grok-section-subtitle" style="margin-bottom:32px;">What makes Grok different from every other AI model out there.</p>
+
+        <div class="grok-features-grid">
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">🔍</div>
+            <div class="grok-feature-title">DeepSearch</div>
+            <div class="grok-feature-desc">Grok's DeepSearch mode scours the web and X in real time, synthesizing live data and user sentiment across industries — no stale training cutoffs.</div>
+          </div>
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">🧠</div>
+            <div class="grok-feature-title">Big Brain / Think Mode</div>
+            <div class="grok-feature-desc">Advanced reasoning that thinks for seconds to minutes, correcting errors mid-process. Ideal for complex math, science, and multi-step problem solving.</div>
+          </div>
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">💻</div>
+            <div class="grok-feature-title">Code Supercharger</div>
+            <div class="grok-feature-desc">Receive code guidance, solutions, and best practices across all major programming languages. Grok understands context and writes production-ready code.</div>
+          </div>
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">🎨</div>
+            <div class="grok-feature-title">Grok Imagine</div>
+            <div class="grok-feature-desc">Generate stunning images and videos from text prompts. Edit, remix, and share visual creations — powered by xAI's Imagine API launched January 2026.</div>
+          </div>
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">🎙️</div>
+            <div class="grok-feature-title">Grok Voice</div>
+            <div class="grok-feature-desc">Engage in seamless, natural voice conversations with Grok Voice. Available on iOS, Android, and web — talk to AI like you talk to a friend.</div>
+          </div>
+          <div class="grok-feature-card">
+            <div class="grok-feature-icon">📄</div>
+            <div class="grok-feature-title">Document Understanding</div>
+            <div class="grok-feature-desc">Upload lengthy documents and Grok condenses them into concise summaries, highlighting key points and actionable findings in seconds.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grok-divider"></div>
+
+    <!-- ===== GROK VERSIONS SECTION ===== -->
+    <section class="grok-section" id="grok-versions">
+      <div class="grok-section-inner">
+        <p class="grok-section-title">The Evolution of <span>Grok</span></p>
+        <p class="grok-section-subtitle">From a bold experiment to the world's most capable AI — the Grok journey in four milestones.</p>
+
+        <div class="grok-versions">
+          <div class="grok-version-card">
+            <span class="grok-version-badge">Origin</span>
+            <div class="grok-version-name">Grok 1</div>
+            <div class="grok-version-date">November 2023</div>
+            <div class="grok-version-desc">The first Grok. Launched exclusively for X Premium+ subscribers. Introduced real-time X integration and an unfiltered, witty personality inspired by The Hitchhiker's Guide to the Galaxy.</div>
+          </div>
+          <div class="grok-version-card">
+            <span class="grok-version-badge">Expansion</span>
+            <div class="grok-version-name">Grok 2</div>
+            <div class="grok-version-date">August 2024</div>
+            <div class="grok-version-desc">Major upgrade with image understanding and generation. Introduced Aurora image model, expanded to more users, and added enterprise-grade document analysis capabilities.</div>
+          </div>
+          <div class="grok-version-card">
+            <span class="grok-version-badge">Reasoning</span>
+            <div class="grok-version-name">Grok 3</div>
+            <div class="grok-version-date">February 2025</div>
+            <div class="grok-version-desc">Trained on xAI's Colossus supercluster with 10x the compute of Grok 2. Introduced DeepSearch, Big Brain mode, and advanced reasoning. Outperformed GPT-4o on key benchmarks.</div>
+          </div>
+          <div class="grok-version-card active">
+            <span class="grok-version-badge">Latest</span>
+            <div class="grok-version-name">Grok 4</div>
+            <div class="grok-version-date">July 2025</div>
+            <div class="grok-version-desc">The world's smartest AI according to xAI. Available via SuperGrok subscription. Grok 4 Heavy offers multi-agent reasoning for the most challenging tasks. $20B Series E funded.</div>
+          </div>
+        </div>
+
+        <!-- Grok Modes -->
+        <p class="grok-section-title" style="font-size:1.8rem; margin-bottom:12px;">Grok Modes & Personas</p>
+        <p class="grok-section-subtitle" style="margin-bottom:32px;">Grok adapts to your needs with specialized modes and customizable personalities.</p>
+
+        <div class="grok-modes-grid">
+          <div class="grok-mode-card">
+            <div class="grok-mode-icon-wrap">🤖</div>
+            <div class="grok-mode-content">
+              <div class="grok-mode-title">Companion Mode</div>
+              <div class="grok-mode-desc">Your everyday AI assistant for general questions, creative writing, brainstorming, and casual conversation. Friendly, helpful, and always available.</div>
+            </div>
+          </div>
+          <div class="grok-mode-card">
+            <div class="grok-mode-icon-wrap">😈</div>
+            <div class="grok-mode-content">
+              <div class="grok-mode-title">Unhinged Comedian</div>
+              <div class="grok-mode-desc">Grok's signature mode — raw, unfiltered humor with no corporate guardrails. The personality that made Grok famous on X and the crypto community.</div>
+            </div>
+          </div>
+          <div class="grok-mode-card">
+            <div class="grok-mode-icon-wrap">🎓</div>
+            <div class="grok-mode-content">
+              <div class="grok-mode-title">Homework Helper</div>
+              <div class="grok-mode-desc">Step-by-step explanations for complex topics. Grok breaks down math, science, history, and more into digestible, easy-to-understand answers.</div>
+            </div>
+          </div>
+          <div class="grok-mode-card">
+            <div class="grok-mode-icon-wrap">🩺</div>
+            <div class="grok-mode-content">
+              <div class="grok-mode-title">Grok "Doc"</div>
+              <div class="grok-mode-desc">Medical information, symptom analysis, and health guidance. Grok Doc provides informational support while always recommending professional consultation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grok-divider"></div>
+
+    <!-- ===== GROK x BALLOON SECTION ===== -->
+    <section class="grok-section" id="grok-balloon">
+      <div class="grok-section-inner">
+        <div class="grok-x-balloon">
+          <p style="font-size:3rem; margin-bottom:16px;">🎈 × 🤖</p>
+          <h2 class="grok-x-balloon-title">Balloonification Meets Grok</h2>
+          <p class="grok-x-balloon-desc">
+            The Balloonification community lives and breathes the same spirit as Grok — bold, unfiltered, and unapologetically fun. We're the memecoin that Grok would endorse: pure chaos, pure joy, and pure Solana speed.
+          </p>
+          <div class="grok-x-balloon-pills">
+            <span class="grok-pill">Real-Time Intelligence</span>
+            <span class="grok-pill">Truth-Seeking</span>
+            <span class="grok-pill">Unfiltered Vibes</span>
+            <span class="grok-pill">Community Driven</span>
+            <span class="grok-pill">Solana Speed</span>
+            <span class="grok-pill">Grok-Approved Energy</span>
+            <span class="grok-pill">Meme Culture</span>
+            <span class="grok-pill">xAI Inspired</span>
+          </div>
+          <a href="https://dexscreener.com/solana/AbV1wGkFmg39rGpnYAgMB98iMJDJbZMwsDgAmGBypump" target="_blank" rel="noopener noreferrer" class="grok-btn">Buy on DexScreener ↗</a>
+          <a href="https://x.com/i/communities/2035132160039075990" target="_blank" rel="noopener noreferrer" class="grok-btn grok-btn-outline">Join Community</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="grok-divider"></div>
+
+    <script>
+      // Inject Grok sections after the React app mounts
+      (function() {
+        function moveGrokSections() {
+          var root = document.getElementById('root');
+          var sections = document.querySelectorAll('.grok-section, .grok-divider');
+          if (root && root.children.length > 0 && sections.length > 0) {
+            // Sections are already after root, nothing to do
+          }
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', moveGrokSections);
+        } else {
+          moveGrokSections();
+        }
+      })();
+    </script>
+  </body>
+
+</html>
